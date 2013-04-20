@@ -36,6 +36,10 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 - ボタンをタップしたらアラート
 - コンソールから動的にボタンのタイトルを書き換える
 
+### テストについて
+- Bacon (Unit, Functional)
+- Carabash
+
 ### デバッグの仕方
 #### `rake debug=1` (GDB)
 - bt, break, pro, pri くらい？
