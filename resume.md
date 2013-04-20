@@ -19,7 +19,6 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 - Ruby vs JavaScript
 - ObjC のコードが吐かれるのではなく、LLVM を使用して Objective-C ランタイム上で動作するバイナリになる
 
-
 ## 開発の手順
 ### 購入〜インストールの流れ
 さらっと購入ページ、メール、ダウンロード、インストールという手順をたどることを書くだけ。
@@ -42,11 +41,11 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 - bt, break, pro, pri くらい？
 
 ## 主要なライブラリ
-### Bundler と組み合わせる
-### BubbleWrap
-### Teacup
-### Pixate
-### CocoaPods
+### [Bundler](http://gembundler.com) と組み合わせる
+### [BubbleWrap](http://bubblewrap.io)
+### [Teacup](https://github.com/rubymotion/teacup)
+### [Pixate](http://www.pixate.com)
+### [CocoaPods](http://cocoapods.org)
 
 ## 情報の調べ方
 - [Developer Center](http://www.rubymotion.com/developer-center/)
@@ -57,7 +56,6 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 - [RubyMotion JP](http://rubymotion.jp)
   - IRC チャンネル
   - RubyMotion もくもく会
-
 
 # チュートリアル
 Rails 製の Web API と連携したアプリケーションを実際に作ってみる。
@@ -87,7 +85,6 @@ AFMotion を使う。
 
 何か端末ならではの機能も使いたい気がする。
 - 位置情報、カメラ etc.
-
 
 # メモ
 ## iOS アプリ開発でおさえておきたいもの
