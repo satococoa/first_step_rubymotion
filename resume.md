@@ -16,11 +16,12 @@
 
 ## ライセンス体系
 - サポート、アップデートは年間更新 (ソフトウェア自体は使い続けられる)
+- 更新料は新規ライセンスの約半額
 
 ## 仕組み
 Objective-C で実装された Ruby を使い、LLVM により Objective-C ランタイム上で動作するバイナリになる。
 
-この仕組みのおかげで Objective-C で作られたライブラリも RubyMotion ではそのまま扱えるし、Objective-C で定義されたクラスに特異メソッドを定義するなんてことも可能。(Objective-C でも Objective-C ランタイムの関数を使用すれば出来るが。)
+この仕組みのおかげで Objective-C で作られたライブラリも RubyMotion ではそのまま扱えるし、Objective-C で定義されたクラスに特異メソッドを定義するなんてことも可能。
 
 ## RubyMotion の魅力
 - Cocoa Touch フレームワークを直接扱うことになるので、Objective-C の知識は必ずしも必須ではないが、Cocoa Touch の知識は必要となる。
@@ -36,6 +37,11 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 ### Titanium
 - Ruby vs JavaScript
 - ObjC のコードが吐かれるのではなく、LLVM を使用して Objective-C ランタイム上で動作するバイナリになる
+
+### Xamarin
+- Ruby vs C#
+- (TODO: 調査)
+
 
 ## 開発の手順
 ### 購入〜インストールの流れ
@@ -64,16 +70,15 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 
 ## 主要なライブラリ
 ### [Bundler](http://gembundler.com) と組み合わせる
-### [BubbleWrap](http://bubblewrap.io)
-### [Teacup](https://github.com/rubymotion/teacup)
-### [Pixate](http://www.pixate.com)
 ### [CocoaPods](http://cocoapods.org)
+### [motion-testflight](https://github.com/HipByte/motion-testflight)
+### [BubbleWrap](http://bubblewrap.io)
 
 ## 情報の調べ方
 - [Developer Center](http://www.rubymotion.com/developer-center/)
 - [Google Groups](http://groups.google.com/group/rubymotion)
 - [Motion Meetup](http://meetup.rubymotion.com)
-- [Stack Overflow](http://stackoverflow.com)
+- [Stack Overflow](http://stackoverflow.com) Objective-C の項目も参考になるよ、と。
 - [RubyMotion API Reference](http://www.rubymotion.com/developer-- ter/api/)
 - [RubyMotion JP](http://rubymotion.jp)
   - IRC チャンネル
@@ -81,6 +86,11 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 
 # チュートリアル
 Rails 製の Web API と連携したアプリケーションを実際に作ってみる。
+
+アプリ案
+- RSS リーダー
+- メモアプリ
+- 行きたい場所メモとか
 
 ## CRUD のアプリをつくってみる
 AFMotion を使う。
@@ -94,8 +104,11 @@ AFMotion を使う。
 色々紹介はするが、チュートリアルでは motion-nanostore OR Serialize を使いたい。  
 ここでは一番基本的な Serialize でいいか。
 
-何か端末ならではの機能も使いたい気がする。
-- 位置情報、カメラ etc.
+- 何を保存するか。
+  - RSS リーダーならお気に入りをローカルに持たせてもいいかも。
+    - 保存する属性: id, title, url, bookmarked_at
+  - 既読情報？いつどこで既読にしたかを管理してみる？
+  - Map に出したら意味はわからないけれど面白いかも
 
 ### NSUserDefault (`App::Persistent`)
 ### Serialize (`NSCoding protocol`)
