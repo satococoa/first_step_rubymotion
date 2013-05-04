@@ -1,3 +1,7 @@
+# 構成
+- 第1章: RubyMotion 自体や学び方などの説明
+- 第2章: 実際に手を動かしてアプリをつくる
+
 # はじめに
 ## 対象読者
 - iOS アプリの開発をしてみたい Rubyist
@@ -56,8 +60,8 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
 - Terminal
 
 ### Hello, world
-- 単純なアラート
-- ボタンをタップしたらアラート
+- 単純なアラート ->  sample: HelloWorld
+- ボタンをタップしたらアラート -> sample: HelloWorld2
 - コンソールから動的にボタンのタイトルを書き換える
 
 ### テストについて
@@ -84,6 +88,13 @@ Objective-C で実装された Ruby を使い、LLVM により Objective-C ラ�
   - IRC チャンネル
   - RubyMotion もくもく会
 
+## iOS アプリ開発でおさえておきたいもの
+- Apple の公式ドキュメント (特に View Controller Programming, View Programming)
+  - 日本語訳がある: https://developer.apple.com/jp/devcenter/ios/library/japanese.html
+- [エキスパートObjective-Cプログラミング ― iOS/OS Xのメモリ管理とマルチスレッド](http://tatsu-zine.com/books/objc)
+- [iOS開発におけるパターンによるオートマティズム](http://hmdt.jp/hmdtbooks/pg329.html)
+
+
 # チュートリアル
 Rails 製の Web API と連携したアプリケーションを実際に作ってみる。
 
@@ -91,6 +102,13 @@ Rails 製の Web API と連携したアプリケーションを実際に作っ�
 - RSS リーダー
 - メモアプリ
 - 行きたい場所メモとか
+
+
+本格的にアプリをつくる際には必須なので、以下についてもサンプルに入れたい
+- NSNotification (`App.notification_center`)
+- KVO (`BW::KVO`)
+- GCD (`Dispatch`)
+- NSOperationQueue
 
 ## CRUD のアプリをつくってみる
 AFMotion を使う。
@@ -114,16 +132,3 @@ AFMotion を使う。
 ### Serialize (`NSCoding protocol`)
 ### Core Data
 ### [NanoStoreInMotion](https://github.com/siuying/NanoStoreInMotion)
-
-# メモ
-## iOS アプリ開発でおさえておきたいもの
-- Apple の公式ドキュメント (特に View Controller Programming, View Programming)
-- [エキスパートObjective-Cプログラミング ― iOS/OS Xのメモリ管理とマルチスレッド](http://tatsu-zine.com/books/objc)
-- [iOS開発におけるパターンによるオートマティズム](http://hmdt.jp/hmdtbooks/pg329.html)
-
-## よりよい設計のために知っておきたい iOS の知識
-### NSNotification (`App.notification_center`)
-### KVO (`BW::KVO`)
-### GCD (`Dispatch`)
-### NSOperationQueue
-
